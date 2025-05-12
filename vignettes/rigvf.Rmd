@@ -103,8 +103,8 @@ res <- gene_elements(gene_id = "ENSG00000187961", verbose = TRUE)
 res
 
 res |>
-    dplyr::select(`regions`) |>
-    tidyr::unnest_wider(`regions`)
+    dplyr::select(`elements`) |>
+    tidyr::unnest_wider(`elements`)
 ```
 
 ## GRanges-based queries
@@ -186,7 +186,7 @@ for more details).
 # up to 200 variants:
 v <- gene_variants(gene_name = "GCK", limit=200L, verbose=TRUE) |>
   dplyr::select(-c(gene, chr, source, source_url)) |>
-  tidyr::unnest_wider(`sequence variant`) |>
+  tidyr::unnest_wider(sequence_variant) |>
   dplyr::rename(seqnames = chr) |>
   dplyr::mutate(start = pos + 1, end = pos + 1) |>
   as_granges()
