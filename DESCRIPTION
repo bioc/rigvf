@@ -1,6 +1,6 @@
 Package: rigvf
 Title: R interface to the IGVF Catalog
-Version: 1.0.1
+Version: 1.0.2
 Authors@R:
     c(person(
         "Martin", "Morgan", role = "aut",
