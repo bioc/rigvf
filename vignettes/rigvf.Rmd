@@ -103,8 +103,8 @@ res <- gene_elements(gene_id = "ENSG00000187961", verbose = TRUE)
 res
 
 res |>
-    dplyr::select(`elements`) |>
-    tidyr::unnest_wider(`elements`)
+    dplyr::select(elements) |>
+    tidyr::unnest_wider(elements)
 ```
 
 ## GRanges-based queries
