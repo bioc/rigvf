@@ -103,7 +103,7 @@ extensive information.
 }
 \description{
 This page documents functions using the IGVF REST
-API, documented at \url{https://api.catalog.igvf.org/#}.
+API, documented at \url{https://api.catalogkg.igvf.org/#}.
 
 Note that functions will only return a limited number
 of responses, see \code{limit} and \code{page} arguments below for control

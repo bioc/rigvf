@@ -29,7 +29,7 @@ range_to_string <-
 #' @title Query the IGVF Catalog via REST API
 #'
 #' @description This page documents functions using the IGVF REST
-#'     API, documented at <https://api.catalog.igvf.org/#>.
+#'     API, documented at <https://api.catalogkg.igvf.org/#>.
 #'
 #' @description Note that functions will only return a limited number
 #'     of responses, see `limit` and `page` arguments below for control

@@ -67,7 +67,7 @@ Queries are simple REST requests implemented using the *httr2* package.
 Here we query variants associated with "GCK"; one could also use, e.g., 
 Ensembl identifiers.
 
-[Catalog API]: https://api.catalog.igvf.org/#
+[Catalog API]: https://api.catalogkg.igvf.org/#
 
 ```{r}
 library(rigvf)

@@ -3,7 +3,7 @@ test_that("rigvf_config contains expected data", {
     expect_true(all(keys %in% rigvf_config$ls()))
     expect_identical(
         rigvf_config$get("catalog_host"),
-        "https://api.catalog.igvf.org"
+        "https://api.catalogkg.igvf.org"
     )
     expect_identical(
         rigvf_config$get("db_host"),

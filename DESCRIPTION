@@ -30,7 +30,7 @@ biocViews: ThirdPartyClient, Annotation, VariantAnnotation,
    FunctionalGenomics, GeneRegulation, GenomicVariation,
    GeneTarget
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Suggests: 
     knitr,
     rmarkdown,
