@@ -13,14 +13,14 @@ test_that("catalog request works", {
     expect_identical(
         response$args,
         list(list(
-            gene_id = "123", organism = "Homo sapiens", verbose = "false"
+            gene_id = "123", limit = "25", organism = "Homo sapiens", page = "0", verbose = "false"
         ))
     )
     expect_identical(
         response$url,
         paste0(
-            "https://httpbin.org/anything/api/genes/variants",
-            "?gene_id=123&organism=Homo sapiens&verbose=false"
+          "https://httpbin.org/anything/api/genes/variants",
+          "?gene_id=123&organism=Homo sapiens&page=0&limit=25&verbose=false"
         )
     )
 })

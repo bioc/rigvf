@@ -151,6 +151,7 @@ for more examples.
 
 ```{r message=FALSE}
 library(plyranges)
+library(tibble)
 rng <- data.frame(seqnames="chr1", start=10e6+1, end=10.1e6) |>
   as_granges()
 
