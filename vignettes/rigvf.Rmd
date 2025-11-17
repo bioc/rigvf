@@ -155,20 +155,20 @@ rng <- data.frame(seqnames="chr1", start=10e6+1, end=10.1e6) |>
   as_granges()
 
 e <- elements(rng, limit=200L) |>
-  plyranges::filter(source != "ENCODE_EpiRaction")
+  filter(source != "ENCODE_EpiRaction")
 e
 ```
 
 ```{r}
 tiles <- tile_ranges(rng, width=10e3) %>%
-  plyranges::select(-partition) %>%
-  plyranges::mutate(id = letters[seq_along(.)])
+  select(-partition) %>%
+  mutate(id = letters[seq_along(.)])
 
 # count overlaps of central basepair of elements in tiles
 e |>
-  plyranges::anchor_center() |>
-  plyranges::mutate(width = 1) |>
-  plyranges::join_overlap_left(tiles) |>
+  anchor_center() |>
+  mutate(width = 1) |>
+  join_overlap_left(tiles) |>
   tibble::as_tibble() |>
   dplyr::count(id)
 ```
@@ -209,7 +209,7 @@ Renaming some columns:
 
 ```{r}
 v_for_plot <- v |>
-  plyranges::select(snp = rsid, p = log10pvalue, effect_size)
+  select(snp = rsid, p = log10pvalue, effect_size)
 ```
 
 To match with the correct gene annotation, we could explicitly define 
