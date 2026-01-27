@@ -94,17 +94,11 @@ gene_variants(gene_name = "GCK", effect_size="gt:0.5")
 The help page `?catalog_queries` outlines other available user-facing
 functions. 
 
-Note that nested columns in the response can be widen-ed using *tidyr*.
-For example, when querying genomic elements that are associated with a gene,
-we get back nested output:
+An example of nested output from `gene_elements()`:
 
 ```{r}
 res <- gene_elements(gene_id = "ENSG00000187961", verbose = TRUE)
 res
-
-res |>
-    dplyr::select(elements) |>
-    tidyr::unnest_wider(elements)
 ```
 
 ## GRanges-based queries

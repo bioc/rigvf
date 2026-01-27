@@ -137,11 +137,7 @@ rigvf::gene_variants(gene_name = "GCK", verbose = TRUE)
 
 rigvf::variant_genes(spdi = "NC_000001.11:920568:G:A")
 
-res <- rigvf::gene_elements(gene_id = "ENSG00000187961")
-res
-res |>
-    dplyr::select(elements) |>
-    tidyr::unnest_wider(elements)
+rigvf::gene_elements(gene_id = "ENSG00000187961")
 
 rng <- GenomicRanges::GRanges("chr1", IRanges::IRanges(1157520,1158189))
 
