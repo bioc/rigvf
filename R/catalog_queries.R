@@ -279,11 +279,16 @@ elements <-
         
     tib <- j_pivot(response, as = "tibble")
     
+    reserved <- c(
+        "seqnames", "ranges", "strand", "seqlevels", "seqlengths",
+        "isCircular", "start", "end", "width", "element"
+    )
+    meta <- tib[, !names(tib) %in% c("chr", "start", "end", reserved)]
     element_ranges <- GRanges(
         seqnames = tib$chr,
-        ranges = IRanges(tib$start + 1, tib$end), # API gives 0-based start 
-        strand = "*", 
-        tib[,-seq_len(3)] # remove chr start end
+        ranges = IRanges(tib$start + 1, tib$end), # API gives 0-based start
+        strand = "*",
+        meta
     )
     genome(element_ranges) <- igvf_genome # IGVF reference genome
     element_ranges
