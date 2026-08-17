@@ -186,7 +186,7 @@ for more details).
 ```{r}
 # up to 200 variants:
 v <- gene_variants(gene_name = "GCK", limit=200L, verbose=TRUE) |>
-  dplyr::select(-c(gene, source, source_url)) |>
+  dplyr::select(-c(gene, source, source_url, files_filesets)) |>
   tidyr::unnest_wider(sequence_variant) |>
   dplyr::rename(seqnames = chr) |>
   dplyr::mutate(start = pos + 1, end = pos + 1) |>
@@ -210,7 +210,7 @@ Renaming some columns:
 
 ```{r}
 v_for_plot <- v |>
-  select(snp = rsid, p = log10pvalue, effect_size)
+  select(snp = rsid, p = neg_log10_pvalue, effect_size)
 ```
 
 To match with the correct gene annotation, we could explicitly define 
