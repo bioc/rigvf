@@ -1,3 +1,7 @@
+# rigvf 1.4.1
+
+* Fixing upstream issues with API
+
 # rigvf 0.0.5
 
 * Added elements and elements-to-genes query based on GRanges
