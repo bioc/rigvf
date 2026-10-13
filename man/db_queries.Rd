@@ -36,7 +36,7 @@ db_gene_elements(
 \item{username}{character(1) ArangoDB user name. Default: "guest".}
 
 \item{password}{character(1) ArangoDB password. Default:
-"guestigvfcatalog". A better practice is to use an environment
+"guestdaccigvfcatalog". A better practice is to use an environment
 variable to record the password, rather than encoding in a
 script, so \code{password = Sys.getenv("RIGVF_ARANGODB_PASSWORD")}.}
 

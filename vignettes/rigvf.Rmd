@@ -119,7 +119,7 @@ The ArangoDB API provides flexibility but requires greater
 understanding of Arango Query Language and the database
 schema. Documentation is available in the [database][] under the
 'Support' menu item 'REST API' tab using username 'guest' and password
-'guestigvfcatalog'.
+'guestdaccigvfcatalog'.
 
 [database]: https://db.catalog.igvf.org/_db/igvf/_admin/aardvark/index.html#support
 
